@@ -1,0 +1,18 @@
+</main>
+
+<footer class="site-footer">
+  <p>Ghvenakhe llc. © {{ now.Format "2006" }}</p>
+  <p>Built with <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a>. Template by Eric Murphy <a href="https://github.com/ericmurphyxyz/ericmurphy.xyz" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    <ul class="menu menu-social">
+      {{ range.Site.Menus.social -}}
+      <li>
+        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+          {{ partial "icon.html" (dict "icon" .Pre "title" .Name ) }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+</footer>
+
+</body>
+</html>
